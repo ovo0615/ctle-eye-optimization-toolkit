@@ -71,7 +71,7 @@ def parse_sweep_range(start_str, stop_str, step_str):
 class CTLEDashboardApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("CTLE 批次掃描儀與 AEDT 發射中心 - 此工具由 虎門科技資深技術工程師 Jeff Hong 洪敬傑提供")
+        self.root.title("CTLE 批次掃描儀與 AEDT 發射中心")
         self.root.geometry("1100x700")
         self.root.minsize(900, 600)
         
@@ -155,10 +155,6 @@ class CTLEDashboardApp:
         
         btn_gen = ttk.Button(self.left_frame, text="產生全批次 CTLE 模型", command=self.on_generate)
         btn_gen.pack(pady=15, ipadx=10, ipady=10, fill="x", padx=20)
-        
-        # Footer label
-        lbl_footer = ttk.Label(self.left_frame, text="此工具由 虎門科技資深技術工程師 Jeff Hong 洪敬傑提供", font=("Microsoft JhengHei UI", 9), foreground="gray")
-        lbl_footer.pack(side=tk.BOTTOM, pady=(0, 10))
         
         # --- RIGHT FRAME (Plot) ---
         self.fig = Figure(figsize=(6, 5), dpi=100)
